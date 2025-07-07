@@ -1,0 +1,7 @@
+[submodule "reth"]
+	path = reth
+	url = https://github.com/paradigmxyz/reth.git
+	branch = v1.5.0
+[submodule "malachite"]
+	path = malachite
+	url = https://github.com/informalsystems/malachite.git
