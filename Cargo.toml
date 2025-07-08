@@ -43,6 +43,7 @@ directories        = "5.0.1"
 hex                = { version = "0.4.3", features = ["serde"] }
 itertools          = "0.13"
 itf                = "0.2.3"
+libp2p             = "0.56"
 prost              = "0.13"
 prost-build        = "0.13"
 prost-types        = "0.13"
@@ -62,50 +63,50 @@ reqwest            = { version = "0.11", features = ["blocking", "json"] }
 
 [workspace.dependencies.malachitebft-app]
 package = "informalsystems-malachitebft-app"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-app-channel]
 package = "informalsystems-malachitebft-app-channel"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-core-types]
 package = "informalsystems-malachitebft-core-types"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-core-consensus]
 package = "informalsystems-malachitebft-core-consensus"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-codec]
 package = "informalsystems-malachitebft-codec"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-config]
 package = "informalsystems-malachitebft-config"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-metrics]
 package = "informalsystems-malachitebft-metrics"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-proto]
 package = "informalsystems-malachitebft-proto"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-signing-ed25519]
 package = "informalsystems-malachitebft-signing-ed25519"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
 
 [workspace.dependencies.malachitebft-sync]
 package = "informalsystems-malachitebft-sync"
-branch = "main"
-git = "https://github.com/informalsystems/malachite.git"
+branch = "chore/bump-libp2p"
+git = "https://github.com/abipalli/malachite.git"
