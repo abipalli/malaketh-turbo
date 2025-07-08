@@ -7,6 +7,7 @@ use rand::prelude::StdRng;
 use rand::rngs::OsRng;
 use rand::{seq::IteratorRandom, Rng, SeedableRng};
 
+use bytesize::ByteSize;
 use malachitebft_app::node::{CanGeneratePrivateKey, CanMakeGenesis, Node};
 use malachitebft_config::*;
 use malachitebft_core_types::{PrivateKey, PublicKey};
@@ -87,7 +88,7 @@ pub fn generate_config(
         value_sync: ValueSyncConfig::default(),
         consensus: ConsensusConfig {
             timeouts: TimeoutConfig::default(),
-            vote_sync: VoteSyncConfig::default(),
+            queue_capacity: 1000,
             value_payload: ValuePayload::PartsOnly,
             p2p: P2pConfig {
                 protocol: PubSubProtocol::default(),
@@ -120,11 +121,13 @@ pub fn generate_config(
                     selector,
                     num_outbound_peers,
                     num_inbound_peers,
+                    max_connections_per_peer: 1,
                     ephemeral_connection_timeout: Duration::from_millis(
                         ephemeral_connection_timeout_ms,
                     ),
                 },
-                transport,
+                pubsub_max_size: ByteSize::mb(1000),
+                rpc_max_size: ByteSize::mb(1000),
                 ..Default::default()
             },
         },

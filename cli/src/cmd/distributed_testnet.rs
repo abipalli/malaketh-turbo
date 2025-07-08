@@ -225,7 +225,7 @@ fn generate_distributed_config(
         moniker: format!("test-{}", index),
         consensus: ConsensusConfig {
             timeouts: TimeoutConfig::default(),
-            vote_sync: VoteSyncConfig::default(),
+            queue_capacity: 1000,
             value_payload: ValuePayload::PartsOnly,
             p2p: P2pConfig {
                 protocol: PubSubProtocol::default(),
@@ -266,8 +266,9 @@ fn generate_distributed_config(
                     ephemeral_connection_timeout: Duration::from_millis(
                         ephemeral_connection_timeout_ms,
                     ),
+                    max_connections_per_peer: 100,
+                    ..Default::default()
                 },
-                transport,
                 ..Default::default()
             },
         },
